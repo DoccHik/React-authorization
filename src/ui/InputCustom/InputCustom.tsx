@@ -5,13 +5,13 @@ interface IInputCustom {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // пусто
   placeholder?: string;
-  // type: string;
+  // FIXME: type
 }
 export const InputCustom: React.FunctionComponent<IInputCustom> = ({
   value,
   onChange,
   placeholder = "",
-  // type,
+  // FIXME: type
 }) => {
   return (
     <input
