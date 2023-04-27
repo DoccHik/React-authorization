@@ -16,8 +16,25 @@
   min-height: 500px;
   height: 100%;
   background: rgba(255, 151, 49, 1);
+  transition: all 0.3s ease;
   background: linear-gradient(
     315deg,
+    rgba(255, 151, 49, 1),
+    rgba(72, 103, 106, 1)
+  );
+}
+.auth-gradient-dif {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 500px;
+  min-height: 500px;
+  height: 100%;
+  background: rgba(255, 151, 49, 1);
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    355deg,
     rgba(255, 151, 49, 1),
     rgba(72, 103, 106, 1)
   );
@@ -27,9 +44,21 @@
   font-size: 30px;
   /* text-align: center; */
   color: #fff;
-  margin: 0px 0px 10px 0px;
+  /* margin: 0px 0px 10px 0px; */
+}
+.auth-gradient-dif h1 {
+  font-size: 30px;
+  /* text-align: center; */
+  color: #fff;
+  /* margin: 0px 0px 10px 0px; */
 }
 .auth-gradient p {
+  max-width: 250px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+.auth-gradient-dif p {
   max-width: 250px;
   font-size: 14px;
   text-align: center;
@@ -51,7 +80,7 @@
   text-transform: uppercase;
   text-align: center;
   font-size: 20px;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
 }
 .auth-form-buttons {
   display: flex;
