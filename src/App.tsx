@@ -3,7 +3,6 @@ import styles from "./App.module.css";
 import { useState } from "react";
 import { InputCustom } from "./ui/InputCustom/InputCustom";
 import { ButtonCustom } from "./ui/ButtonCustom/Button";
-import { Auth } from "./screens/auth/auth";
 
 // TODO: 1 - Cверстать форму авторизации.
 // TODO: 2 - Изучить авторизацию на Firebase(поэтапно =) ).
