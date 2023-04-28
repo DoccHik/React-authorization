@@ -1,21 +1,15 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-
-// import { initializeApp } from "firebase/app";
-// import { getAuth } from "firebase/auth";
-
-// // TODO: Replace the following with your app's Firebase project configuration
-// // See: https://firebase.google.com/docs/web/learn-more#config-object
-// const firebaseConfig = {
-//   // ...
-// };
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-
-// // Initialize Firebase Authentication and get a reference to the service
-// const auth = getAuth(app);
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store/store.js";
+import "./firebase.js";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <App />
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );
