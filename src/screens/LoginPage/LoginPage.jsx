@@ -31,9 +31,13 @@ const LoginPage = () => {
             token: user.accessToken,
           })
         );
+        alert("Авторизация прошла успешно!");
         navigate("/");
       })
-      .catch((err) => console.err(err));
+      .catch((err) => {
+        alert("Пользователь не найден.");
+        console.err(err);
+      });
   };
 
   return (

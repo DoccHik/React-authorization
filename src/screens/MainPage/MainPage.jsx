@@ -8,7 +8,7 @@ const MainPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { isAuth, email } = useAuth();
-  console.log(isAuth);
+  // console.log(isAuth);
 
   const exitHandler = () => {
     dispatch(removeUser());

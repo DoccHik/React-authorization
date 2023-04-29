@@ -20,7 +20,7 @@ const LoginPage = () => {
     console.log(auth);
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
+        // console.log(user);
         dispatch(
           setUser({
             email: user.email,
@@ -28,9 +28,13 @@ const LoginPage = () => {
             token: user.accessToken,
           })
         );
+        alert("Регистрация прошла успешно!");
         navigate("/");
       })
-      .catch((err) => console.err(err));
+      .catch((err) => {
+        alert("Введите корекктные данные");
+        console.err(err);
+      });
   };
 
   return (
