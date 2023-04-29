@@ -14,13 +14,19 @@ const MainPage = () => {
     dispatch(removeUser());
   };
 
-  return isAuth ? (
+  useEffect(() => {
+    if (isAuth) {
+      navigate("/");
+    } else {
+      navigate("/login");
+    }
+  }, [isAuth]);
+
+  return (
     <>
       <h1>Welcome! {email}</h1>
       <button onClick={() => exitHandler()}>Выйти c {email}</button>
     </>
-  ) : (
-    navigate("/login")
   );
 };
 
