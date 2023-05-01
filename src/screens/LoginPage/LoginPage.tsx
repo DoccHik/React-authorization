@@ -1,18 +1,21 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "../../styles/modules/LoginPage.module.css";
 import { InputCustom } from "../../ui/InputCustom/InputCustom";
 import { ButtonCustom } from "../../ui/ButtonCustom/Button";
 import { useDispatch } from "react-redux";
 // import { setUser } from "../../store/slices/userSlice.js";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setUser } from "../../store/slices/userSlice";
 
-const LoginPage = () => {
-  const [isAuth, setIsAuth] = React.useState(false);
-  const [phoneNumber, setPhoneNumber] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
+interface ILoginPageStates {
+  email: string;
+  password: string;
+}
+
+const LoginPage: FC = () => {
+  const [email, setEmail] = React.useState<ILoginPageStates>("");
+  const [password, setPassword] = React.useState<ILoginPageStates>("");
 
   const dispatch = useDispatch();
 
@@ -65,10 +68,7 @@ const LoginPage = () => {
                   title="Войти"
                   onClick={() => handleLogin(email, password)}
                 />
-                <ButtonCustom
-                  title="Зарегистрироваться"
-                  onClick={() => navigate("/register")}
-                />
+                <Link to="/register">Зарегистрироваться</Link>
               </div>
             </div>
           </div>

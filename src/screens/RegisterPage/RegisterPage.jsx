@@ -5,7 +5,7 @@ import { ButtonCustom } from "../../ui/ButtonCustom/Button";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../store/slices/userSlice.js";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = React.useState("");
@@ -58,10 +58,7 @@ const LoginPage = () => {
               />
               {/* <Auth /> */}
               <div className={styles["auth-form-buttons"]}>
-                <ButtonCustom
-                  title="Войти"
-                  onClick={() => navigate("/login")}
-                />
+                <Link to="/login">Войти</Link>
                 <ButtonCustom
                   title="Зарегистрироваться"
                   onClick={() => handleRegister(email, password)}
